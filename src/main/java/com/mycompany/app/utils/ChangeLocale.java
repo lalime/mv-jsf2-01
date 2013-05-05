@@ -12,26 +12,26 @@ import javax.enterprise.context.SessionScoped;
  *
  * @author Lalime
  */
+@ManagedBean
+@SessionScoped
+public class ChangeLocale implements Serializable {
 
-@ManagedBean 
-@SessionScoped 
-public class ChangeLocale implements Serializable{ 
+    private String locale = "fr";
 
-  private String locale="fr"; 
+    public ChangeLocale() {
+    }
 
+    public String setFrenchLocale() {
+        locale = "fr";
+        return null;
+    }
 
-  public ChangeLocale() { 
+    public String setEnglishLocale() {
+        locale = "en";
+        return null;
+    }
 
-  } 
-
- 
-
-  public String getLocale() { 
-
-    return locale; 
-
-  } 
-
-   
-
-} 
+    public String getLocale() {
+        return locale;
+    }
+}
